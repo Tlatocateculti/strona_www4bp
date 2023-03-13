@@ -1,0 +1,18 @@
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	--btn-width: 100px;
+	--btn-height: 70px;
+}
+div {
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+button {
+	color: red;
+	height: var(--btn-height);
+	width: var(--btn-width);
+	position: absolute;
+	left: calc((100% - var(--btn-width)) / 2);
+	top: calc((100vh - var(--btn-height)) / 2);
+}

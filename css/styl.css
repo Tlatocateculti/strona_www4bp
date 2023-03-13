@@ -1,0 +1,85 @@
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	--btn-height: 5vh;
+}
+
+body > div:first-child {
+	display: grid;
+	grid-template-rows: 15vh 15vh auto 10vh;
+	grid-template-columns: 20% auto 15%;
+}
+
+
+header{
+	background: brown;	
+	grid-row: 1;
+	grid-column: 1 / 4;
+}
+
+section {
+	grid-row: 2;
+	grid-column: 1; 
+}
+
+section input {
+	height: 3vh;
+}
+
+div.button p {
+	font-size: 16px;
+	position: relative;
+	top: calc((var(--btn-height) - 16px) / 2);
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+div.button:hover::before {
+	opacity: 0.7;
+}
+
+div.button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #30d5c8; /*rgba(R,G,B,A)*/
+}
+
+div.button {
+	position: relative;
+	cursor: pointer;
+	height: var(--btn-height);
+	border: solid lightblue 1px;
+	
+}
+
+nav {
+	background: yellow;
+	grid-row: 3;
+	grid-column: 1;
+}
+
+main {
+	background: green;
+	grid-row: 2 / 4;
+	grid-column: 2;
+}
+
+aside {
+	background: red;
+	grid-row: 2 / 4;
+	grid-column: 3;
+}
+
+footer {
+	background: black;
+	grid-row: 4;
+	grid-column: 1 / 4;
+}
